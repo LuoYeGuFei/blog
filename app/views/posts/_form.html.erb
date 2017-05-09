@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="col-lg-9">
+    <%= simple_form_for @post, remote: true do |f| %>
+      <div class="form-group">
+        <%= f.input_field :title, class:"form-input", id: "title-input", placeholder: "在这里输入标题" %>
+      </div>
+    <% end %>
+  </div>
+</div>
