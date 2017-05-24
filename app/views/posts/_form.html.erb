@@ -1,0 +1,28 @@
+<div class="col-md-12">
+  <%= simple_form_for @post do |f| %>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-10">
+          <%= f.input :title, label: false, input_html: { class: "form-control", placeholder: "在这里输入标题"} %>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-default dropdown-toggle pull-left" type="button" id="category" data-toggle="dropdown">文章类别
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="category">
+            <li><a role="menu" tabindex= "-1" href="#">转载</a></li>
+            <li class="active"><a role="menu" tabindex="-1" href="#">原创</a></li>
+            <li class="divider"></li>
+            <li class="disabled"><a role="menu" tabindex="-1" href="#">翻译</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.input :content, as: :text, label: false, input_html: { rows: 15, class: "form-control"} %>
+    </div>
+    <div class="form-froup pull-right">
+      <%= f.button :submit, "保存" %>
+    </div>
+  <% end %>
+</div>

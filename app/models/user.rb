@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   attr_accessor :password, :password_confirmation
 
+  has_many :posts
+
   validates_presence_of :email, message: "邮箱不能为空"
   validates_format_of :email, message: "邮箱格式不正确",
     with: /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/,
