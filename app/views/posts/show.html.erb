@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="text-center">
+    <%= content_tag :h1, content_tag(:span, @post.title)%>
+  </div>
+  <div class="post-body">
+    <%= content_tag :p, content_tag(:text_area, @post.content) %>
+  </div>
+</div>
